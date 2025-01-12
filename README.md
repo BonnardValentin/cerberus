@@ -147,7 +147,7 @@ Cerberus provides an interactive OpenAPI UI:
 1. Activate the Poetry environment:
 
    ```bash
-   poetry shell
+   poetry env activate
    ```
 
 2. Start the FastAPI server:
