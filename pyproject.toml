@@ -1,0 +1,36 @@
+[project]
+name = "cerberus"
+version = "0.1.0"
+description = "Cerberus is a modular, containerized AI solution offering sentiment analysis, text summarization, and text generation APIs using fine-tuned and quantized Hugging Face models."
+authors = [
+    { name = "Bonnard Valentin", email = "up.north.gate@protonmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = [ "readme" ]
+
+dependencies = [
+    "fastapi (>=0.115.6,<0.116.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "transformers (>=4.26,<5.0)",
+    "datasets (>=2.6,<3.0)",
+    "torch==2.5.1",
+    "torchvision==0.20.1",
+    "torchaudio==2.5.1",
+    "optimum (>=1.5,<2.0)",
+    "accelerate (>=0.20,<1.0)",
+    "numpy (>=2.2.1)",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+pytest = "^8.3.4"
+
+[tool.poetry]
+package-mode = false
